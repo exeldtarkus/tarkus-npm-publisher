@@ -23,6 +23,25 @@ async function checkNpmLogin() {
   }
 }
 
+async function askBuildOptions() {
+  const response = await prompts([
+    {
+      type: 'confirm',
+      name: 'shouldBuild',
+      message: '📦 Apakah ingin menjalankan proses build?',
+      initial: true
+    },
+    {
+      type: prev => prev ? 'text' : null,
+      name: 'buildCommand',
+      message: '⚙️  Masukkan perintah build:',
+      initial: 'npm run build'
+    }
+  ]);
+
+  return response;
+}
+
 async function askCommitChanges() {
   const response = await prompts({
     type: 'confirm',
@@ -60,9 +79,14 @@ async function main() {
     await askCommitChanges();
   }
 
-  console.log('🔧 Building project...');
-  await runCommand('npm run build');
+  // Opsi build
+  const { shouldBuild, buildCommand } = await askBuildOptions();
+  if (shouldBuild && buildCommand) {
+    console.log(`🔧 Menjalankan build: ${buildCommand}`);
+    await runCommand(buildCommand);
+  }
 
+  // Versi
   const versionType = await promptVersionType();
   if (!versionType) {
     console.log('❌ Cancelled.');
@@ -88,7 +112,6 @@ async function main() {
       process.exit(1);
     }
 
-    // Cek ulang login
     const recheck = await checkNpmLogin();
     if (!recheck) {
       console.error('❌ Masih belum login ke NPM. Proses dihentikan.');
