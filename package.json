@@ -21,10 +21,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/exeldtarkus/logger-services.git"
+    "url": "git+https://github.com/exeldtarkus/tarkus-npm-publisher.git"
   },
   "bugs": {
-    "url": "https://github.com/exeldtarkus/logger-services/issues"
+    "url": "https://github.com/exeldtarkus/tarkus-npm-publisher/issues"
   },
-  "homepage": "https://github.com/exeldtarkus/logger-services#readme"
+  "homepage": "https://github.com/exeldtarkus/tarkus-npm-publisher#readme"
 }
