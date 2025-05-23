@@ -1,0 +1,17 @@
+{
+  "name": "tarkus-npm-publisher",
+  "version": "1.0.0",
+  "description": "CLI tool untuk build project, bump versi, commit, push ke GitHub, dan publish ke NPM",
+  "main": "index.js",
+  "bin": {
+    "tarkus-npm-publisher": "./index.js"
+  },
+  "type": "module",
+  "scripts": {},
+  "dependencies": {
+    "prompts": "^2.4.2"
+  },
+  "keywords": ["publish", "git", "npm", "cli"],
+  "author": "Exel Tarkus",
+  "license": "MIT"
+}
