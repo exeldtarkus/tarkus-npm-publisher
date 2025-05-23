@@ -123,6 +123,8 @@ async function main() {
   await runCommand('npm publish --access public');
 
   console.log('[✓] Done!');
+
+  process.exit(0);
 }
 
 main().catch(err => {

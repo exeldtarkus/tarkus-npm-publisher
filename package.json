@@ -18,5 +18,13 @@
     "cli"
   ],
   "author": "Exel Tarkus",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exeldtarkus/logger-services.git"
+  },
+  "bugs": {
+    "url": "https://github.com/exeldtarkus/logger-services/issues"
+  },
+  "homepage": "https://github.com/exeldtarkus/logger-services#readme"
 }
