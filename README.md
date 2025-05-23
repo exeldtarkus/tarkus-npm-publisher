@@ -1,9 +1,3 @@
-Here's the **English version** of your `README.md` for `tarkus-npm-publisher`, suitable for publishing on GitHub and npm:
-
----
-
-## 📘 `README.md` (English)
-
 ````markdown
 # 🚀 tarkus-npm-publisher
 
